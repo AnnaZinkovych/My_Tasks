@@ -1,6 +1,10 @@
 import numpy as np
 import pandas as pd
 import spacy
+import warnings
+warnings.filterwarnings("ignore", #warnings hendling
+message=r".*\[W007\].*",
+category=UserWarning)
 nlp = spacy.load('en_core_web_md')
 
 def movie_serch_function(sentences):
